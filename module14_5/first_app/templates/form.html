@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<div class="w-50 h-75 m-3  p-4 rounded-3" style="background-color: #D19B9B;">
+    <form action="/about/" method="post">
+    {% csrf_token %}
+    <div>
+        <label for="exampleInputName" class="form-label mt-2"> User name </label>
+        <input type="text" class="form-control" name="username">
+    </div>
+        <div>
+            <label for=""> User Email Address </label>
+            <input type="email"  class="form-control mt-2" name="useremail" aria-describedby="emailHelp">
+        </div>
+        <label class="mt-2"> Rating </label>
+            <select class="form-select" class="form-control" name="select">
+                <option selected>Rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>     
+            <button type="submit" class="btn btn-dark mt-2"> submit </button>
+    </form>
+</div>
+
+{% endblock %}

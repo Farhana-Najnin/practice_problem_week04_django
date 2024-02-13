@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+{% load crispy_forms_tags %}
+<form class="w-50 h-80 m-3 p-3 rounded-2" style="background-color: #8FA7CE;" >
+    {% csrf_token %}
+    {{form | crispy}}
+    <button type="submit" class="btn bg-warning">submit</button>
+</form>
+
+{% endblock %}
